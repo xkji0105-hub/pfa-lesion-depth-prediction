@@ -218,3 +218,20 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# Experimental data
+*.xlsx
+*.xls
+
+# Analysis outputs
+outputs/
+*_outputs/
+verified_*/
+
+# Generated figures and tables
+*.csv
+*.png
+*.pdf
+
+# Serialized models
+*.pkl
+*.joblib
