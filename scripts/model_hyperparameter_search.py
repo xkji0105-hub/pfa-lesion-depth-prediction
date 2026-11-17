@@ -163,7 +163,7 @@ def split_by_rabbit(
     test_size: float,
     seed: int,
 ) -> tuple[np.ndarray, np.ndarray, pd.DataFrame]:
-    rabbits = data[GROUP_COLUMN].drop_duplicates().to_numpy()
+    rabbits = np.asarray(sorted(pd.unique(data[GROUP_COLUMN]).tolist()))
     train_rabbits, test_rabbits = train_test_split(
         rabbits,
         test_size=test_size,
