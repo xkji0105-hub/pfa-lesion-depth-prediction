@@ -117,6 +117,25 @@ and every rabbit appears in a test fold exactly once.
 Replace `path/to/experiment_liver_data2.xlsx` with the actual local path to the
 Excel file. Output directories are created automatically.
 
+### Hyperparameter selection
+
+Hyperparameters for BPNN, SVR, and XGBoost can be selected using randomized
+search followed by fine grid search. All parameter selection is performed
+within the initial training rabbits using rabbit-grouped cross-validation.
+
+```powershell
+python scripts/model_hyperparameter_search.py `
+  --data "path/to/experiment_liver_data2.xlsx" `
+  --output-dir "outputs/hyperparameter_search" `
+  --models MQR BPNN SVR XGBoost `
+  --inner-folds 5 `
+  --split-seed 42 `
+  --search-seed 42
+```
+
+See [HYPERPARAMETER_SEARCH_README.md](HYPERPARAMETER_SEARCH_README.md) for details.
+
+
 ### MQR
 
 ```bash
