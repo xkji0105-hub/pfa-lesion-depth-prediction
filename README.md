@@ -30,10 +30,12 @@ dependence analysis, and calculation of the Friedman H interaction statistic.
 ```text
 pfa-lesion-depth-prediction/
 |-- README.md
+|-- HYPERPARAMETER_SEARCH_README.md
 |-- requirements.txt
 |-- LICENSE
 |-- .gitignore
 `-- scripts/
+    |-- model_hyperparameter_search.py
     |-- mqr_rabbit_bootstrap.py
     |-- bpnn_rabbit_bootstrap.py
     |-- svr_rabbit_bootstrap.py
