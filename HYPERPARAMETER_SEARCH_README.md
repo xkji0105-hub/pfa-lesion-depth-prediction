@@ -37,7 +37,7 @@ Use the same package versions as the main analysis repository when reproducing m
 ## Run all models
 
 ```powershell
-python model_hyperparameter_search.py `
+python scripts/model_hyperparameter_search.py `
   --data "C:\path\to\experiment_liver_data2.xlsx" `
   --output-dir "C:\path\to\tuning_results" `
   --models MQR BPNN SVR XGBoost `
