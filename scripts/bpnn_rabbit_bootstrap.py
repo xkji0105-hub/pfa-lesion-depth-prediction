@@ -113,12 +113,13 @@ def build_model(random_state: int) -> Pipeline:
         (
             "bpnn",
             MLPRegressor(
-                hidden_layer_sizes=(10,),
+                hidden_layer_sizes=(15,),
                 activation="relu",
                 solver="adam",
-                alpha=0.5,
-                batch_size=8,
-                learning_rate_init=0.005,
+                alpha=0.96,
+                batch_size=64,
+                learning_rate_init=0.0041,
+                learning_rate="adaptive",
                 max_iter=1000,
                 tol=1e-4,
                 n_iter_no_change=20,
