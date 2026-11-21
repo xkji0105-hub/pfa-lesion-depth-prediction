@@ -41,13 +41,13 @@ GROUP_COLUMN = "Rabbit"
 TARGET_COLUMN = "Depth"
 
 XGB_PARAMS = {
-    "max_depth": 4,
-    "learning_rate": 0.015,
-    "subsample": 0.40,
-    "colsample_bytree": 0.44,
-    "reg_alpha": 0.17,
-    "reg_lambda": 2.69,
-    "n_estimators": 1328,
+    "max_depth": 2,
+    "learning_rate": 0.02,
+    "subsample": 0.5,
+    "colsample_bytree": 0.5,
+    "reg_alpha": 5,
+    "reg_lambda": 15,
+    "n_estimators": 1500,
     "random_state": 42,
     "n_jobs": -1,
     "objective": "reg:squarederror",
