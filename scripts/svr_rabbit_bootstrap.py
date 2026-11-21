@@ -109,9 +109,9 @@ def build_model() -> Pipeline:
             "svr",
             SVR(
                 kernel="rbf",
-                C=21,
-                gamma=0.0066,
-                epsilon=0.0065,
+                C=5.0,
+                gamma=0.01,
+                epsilon=0.1,
                 max_iter=-1,
             ),
         ),
